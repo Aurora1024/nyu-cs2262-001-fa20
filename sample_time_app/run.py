@@ -2,9 +2,18 @@ from flask import Flask
 app = Flask(__name__)
 
 
-@app.route('/')
-def hello_world():
-    return 'Hello world!'
+# @app.route('/')
+# def hello_world():
+#     return 'Hello world!'
+
+import time
+
+@app.route('/time')
+
+def time():
+
+	return str(time.time())
+
 
 
 app.run(host='0.0.0.0',
